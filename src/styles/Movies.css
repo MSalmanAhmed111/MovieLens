@@ -1,0 +1,15 @@
+.MoviesContainer {
+    margin: 0 2rem;
+    text-align: center;
+}
+.movies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+.movieDetails {
+  border-radius: 50%;
+  margin: 0 1rem;
+}

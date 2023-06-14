@@ -1,0 +1,12 @@
+.centerContent{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.centerContent p{
+    color: lightblue;
+    margin: .5rem 0rem 2rem 0rem;
+}

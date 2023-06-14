@@ -1,0 +1,17 @@
+nav{
+    border-bottom:   2px solid rgba(218, 218, 218, .19);
+}
+nav, .links ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.links li{
+    list-style: none;
+    margin: 0rem 2rem;
+
+}
+.links a{
+    text-decoration: none;
+}
