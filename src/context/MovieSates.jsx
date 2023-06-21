@@ -8,7 +8,7 @@ const MovieStates = (props) => {
   // const movies = JSON.parse(movieData)
   const [myList, setmyList] = useState([]);
   const [allMovies, setallMovies] = useState(movieData);
-  const [inWatchList, setinWatchList] = useState(false)
+  const [recMovies, setrecMovies] = useState([])
   console.log(allMovies)
   const searchMovies = async (title) => {
     try {
@@ -28,7 +28,7 @@ const MovieStates = (props) => {
   };
 
   return (
-    <MovieContext.Provider value={{ allMovies, setallMovies, myList, setmyList, inWatchList,  setinWatchList, searchMovies}}>
+    <MovieContext.Provider value={{ allMovies, setallMovies, myList, setmyList, recMovies,  setrecMovies, searchMovies}}>
       {props.children}
     </MovieContext.Provider>
   );

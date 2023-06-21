@@ -14,34 +14,6 @@ export default function Movies() {
   const indEnd = moviesPerPage * currentPage;
   const indStart = indEnd - moviesPerPage;
 
-  // const [categories, setcaegories] = useState({
-  //   popularMovies: allMovies.filter((movies) => movies.popularity > 1000),
-  //   topRatedMovies: allMovies.filter((movies) => movies.voteAverage >= 8),
-  //   actionAdventureMovies: allMovies.filter(
-  //     (movies) =>
-  //       movies.genre.includes("Action") || movies.genre.includes("Adventure")
-  //   ),
-  //   crimeThrillerMovies: allMovies.filter(
-  //     (movies) =>
-  //       movies.genre.includes("Crime") ||
-  //       movies.genre.includes("Thriller") ||
-  //       movies.genre.includes("Mystery")
-  //   ),
-  //   scienceFictionMovies: allMovies.filter((movies) =>
-  //     movies.genre.includes("Science Fiction")
-  //   ),
-  //   comedyFamilyMovies: allMovies.filter(
-  //     (movies) =>
-  //       movies.genre.includes("Comedy") || movies.genre.includes("Family")
-  //   ),
-  //   animationMovies: allMovies.filter((movies) =>
-  //     movies.genre.includes("Animation")
-  //   ),
-  //   fantasyMovies: allMovies.filter((movies) =>
-  //     movies.genre.includes("fantasyMovies")
-  //   ),
-  // });
-
   const [categories, setcategories] = useState({
     popularMovies: {
       movies: allMovies.filter((movies) => movies.popularity > 1000),
