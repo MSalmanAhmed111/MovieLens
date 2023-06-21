@@ -12,7 +12,7 @@ function Pagination(props) {
   const Moviecategory = props.categoryName;
   console.log(Moviecategory);
   return (
-    <div>
+    <div >
       {pages.map((pgno, index) => (
         <button
           key={index}

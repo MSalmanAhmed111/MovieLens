@@ -9,7 +9,7 @@ import { Button } from "@mui/material";
 export default function BannerSlider(props) {
   const images = [];
   for (let i = 0; i < 3; i++) {
-    images[i] = props.popularMovies[i].posterUrl.toString();
+    images[i] = props.popularMovies[i].posterUrl;
   }
 
   const [activeImageNum, setCurrent] = useState(0);
