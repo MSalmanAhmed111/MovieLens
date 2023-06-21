@@ -13,13 +13,11 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
-import { Padding } from "@mui/icons-material";
 
 export default function MovieCard(props) {
+  
   const { myList, setmyList } = useContext(MovieContext);
   const { title, posterUrl } = props.movie;
-
-
 
   return (
     <>

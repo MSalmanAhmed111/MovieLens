@@ -1,3 +1,7 @@
+body{
+    min-height: 100vh;
+}
+
 .centerContent{
     min-height: 80vh;
     display: flex;

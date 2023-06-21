@@ -3,6 +3,8 @@ import React from "react";
 import { useState } from "react";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 export default function BannerSlider(props) {
   const images = [];
@@ -12,7 +14,7 @@ export default function BannerSlider(props) {
 
   const [activeImageNum, setCurrent] = useState(0);
   const length = images.length;
-  console.log(props.images);
+  
   const nextSlide = () => {
     setCurrent(activeImageNum === length - 1 ? 0 : activeImageNum + 1);
     console.log();
@@ -49,8 +51,15 @@ export default function BannerSlider(props) {
                     <div className="bannerTitle">
                       <h1>{currentSlide.title}</h1>
                       <p>{currentSlide.overview}</p>
-                      <h3>Genre: </h3><span>{currentSlide.genre}</span>
-                      <h3>Rating: </h3><span>{currentSlide.voteAverage}</span>
+                      <h3>Genre: </h3>
+                      <span>{currentSlide.genre}</span>
+                      <h3>Rating: </h3>
+                      <span>{currentSlide.voteAverage}</span>
+                      <br />
+                      <Link to={`/MovieDetails/${currentSlide.title}`}>
+                        <Button sx={{my:4}} variant="contained" >
+                          See More</Button>
+                      </Link>
                     </div>
                   </>
                 )}
