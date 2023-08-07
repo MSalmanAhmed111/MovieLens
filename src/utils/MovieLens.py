@@ -5,8 +5,14 @@ from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 from textblob import TextBlob
 
+
 # Read the movies data from CSV
-movies = pd.read_csv('./mymovie.csv', lineterminator='\n')
+movies = pd.read_csv(r'D:\Study\Other Learning\React\Projects\MovieLens\movielens\src\utils\mymovie.csv', lineterminator='\n')
+
+# Define the function to calculate the rating
+def calculate_rating(vote_count, vote_average, minimum_votes, average_rating):
+    rating = (vote_count / (vote_count + minimum_votes)) * vote_average + (minimum_votes / (vote_count + minimum_votes)) * average_rating
+    return rating
 
 # Define the function to calculate the rating
 def calculate_rating(vote_count, vote_average, minimum_votes, average_rating):
